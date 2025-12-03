@@ -1,7 +1,15 @@
 import React from "react";
 import "./Home.css";
+import { useNavigate } from "react-router-dom";
+
 
 const Home = () => {
+   const navigate = useNavigate(); // hook to navigate programmatically
+
+  const goToAbout = () => {
+    navigate("/about"); // path you want to go to
+  };
+  
   return (
     <div className="home">
 
@@ -15,7 +23,9 @@ const Home = () => {
             traders with digital tools, market access, skills development, and 
             long-term business support.
           </p>
-          <button className="hero-btn">Learn More</button>
+         <button className="hero-btn" onClick={goToAbout}>
+        Learn More
+      </button>
         </div>
       </section>
 
