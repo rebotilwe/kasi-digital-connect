@@ -4,39 +4,44 @@
   color: #ffffff;
 }
 
-/* WRAP YOUR ROOT DIV WITH THIS CLASS INSTEAD OF INLINE STYLE
-   <div className="services-container">
-*/
+/* Intro / hero copy */
+.services-hero {
+  max-width: 900px;
+  margin: 0 auto 3rem;
+}
 
-.services-container h1 {
+.services-hero h1 {
   font-size: 2.2rem;
   margin-bottom: 1rem;
 }
 
-.services-container > p:first-of-type {
+.services-hero p {
   max-width: 780px;
   font-size: 0.98rem;
   line-height: 1.9;
   color: #c8ccd8;
-  margin-bottom: 2.2rem;
 }
 
-/* SUBTITLE */
+/* Main block */
+.services-main {
+  max-width: 1100px;
+  margin: 0 auto;
+}
 
-.services-container h2 {
+/* Heading above the grid */
+.services-main h2 {
   font-size: 1.5rem;
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.6rem;
 }
 
-/* SERVICES LIST AS CARDS */
-
+/* Services list as cards */
 .services-list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.6rem;
-  margin-bottom: 2.4rem;
   list-style: none;
   padding: 0;
+  margin: 0 0 2.4rem;
 }
 
 .service-item {
@@ -53,7 +58,7 @@
     border-color 0.18s ease;
 }
 
-/* accent strip at top */
+/* Accent strip at top using brand colors */
 .service-item::before {
   content: "";
   position: absolute;
@@ -76,16 +81,15 @@
   border-color: #0057a8;
 }
 
-/* Closing paragraph */
-
-.services-container > p:last-of-type {
+/* Closing text */
+.services-footer-text {
   max-width: 620px;
   font-size: 0.96rem;
   line-height: 1.8;
   color: #d0d4e0;
 }
 
-/* RESPONSIVE */
+/* Responsive */
 
 @media (max-width: 1024px) {
   .services-list {
@@ -98,11 +102,22 @@
     padding: 3rem 6vw 4rem;
   }
 
-  .services-container h1 {
+  .services-hero h1 {
     font-size: 1.9rem;
   }
 
   .services-list {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .services-hero p,
+  .services-footer-text {
+    font-size: 0.9rem;
   }
 }
