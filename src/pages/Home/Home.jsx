@@ -2,17 +2,22 @@ import React from "react";
 import "./Home.css";
 import { useNavigate } from "react-router-dom";
 
-
 const Home = () => {
-   const navigate = useNavigate(); // hook to navigate programmatically
+  const navigate = useNavigate();
 
   const goToAbout = () => {
-    navigate("/about"); // path you want to go to
+    navigate("/about");
   };
-  
+
+  const teamMembers = [
+    { src: "/assets/Dineshri.png", alt: "Dineshri" },
+    { src: "/assets/Edward.png", alt: "Edward" },
+    { src: "/assets/InformationDesk.png", alt: "Information Desk" },
+    { src: "/assets/JoshIndarjee.png", alt: "Josh Indarjee" },
+  ];
+
   return (
     <div className="home">
-
       {/* HERO SECTION */}
       <section className="hero">
         <div className="hero-content">
@@ -23,9 +28,9 @@ const Home = () => {
             traders with digital tools, market access, skills development, and 
             long-term business support.
           </p>
-         <button className="hero-btn" onClick={goToAbout}>
-        Learn More
-      </button>
+          <button className="hero-btn" onClick={goToAbout}>
+            Learn More
+          </button>
         </div>
       </section>
 
@@ -44,29 +49,39 @@ const Home = () => {
       {/* FEATURES SECTION */}
       <section className="features">
         <h2>Our Focus Areas</h2>
-
         <div className="feature-container">
           <div className="feature-card">
             <h3>Digital Skills</h3>
             <p>Training on e-commerce, financial literacy, digital payments, and more.</p>
           </div>
-
           <div className="feature-card">
             <h3>Market Access</h3>
             <p>Connecting SMEs to Kasi360, corporate supply chains, and online buyers.</p>
           </div>
-
           <div className="feature-card">
             <h3>Enterprise Growth</h3>
             <p>One year of structured support for 200 adopted SMEs and informal traders.</p>
           </div>
-
           <div className="feature-card">
             <h3>Networking</h3>
             <p>Meet policymakers, investors, innovators, and industry leaders.</p>
           </div>
         </div>
       </section>
+
+      {/* TEAM SECTION */}
+   {/* TEAM SECTION */}
+<section className="team-section">
+  <h2>Meet Our Team</h2>
+  <div className="team-grid">
+    {teamMembers.map((member, index) => (
+      <div key={index} className="team-card">
+        <img src={member.src} alt={member.alt} loading="lazy" />
+      </div>
+    ))}
+  </div>
+</section>
+
 
       {/* CTA SECTION */}
       <section className="cta-section">

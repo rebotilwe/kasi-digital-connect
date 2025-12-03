@@ -1,8 +1,8 @@
-import React from 'react'
-import './About.css'
+import React from 'react';
+import './About.css';
 
 const About = () => {
- return (
+  return (
     <div className="about-container">
 
       {/* Hero Section */}
@@ -14,6 +14,15 @@ const About = () => {
           position local SMEs for growth within South Africa’s evolving digital
           economy.
         </p>
+      </section>
+
+      {/* Video Section */}
+      <section className="about-video">
+        <h2>Watch Our Intro Video</h2>
+        <video controls width="100%" poster="/images/video-poster.jpg">
+          <source src="/videos/kasi.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </section>
 
       {/* Mission */}
@@ -39,7 +48,6 @@ const About = () => {
       {/* Objectives */}
       <section className="about-pillars">
         <h2>Our Key Objectives</h2>
-
         <div className="pillars-grid">
           <div className="pillar-card">
             <h3>Digital Skills Empowerment</h3>
@@ -48,7 +56,6 @@ const About = () => {
               training for SMEs and youth.
             </p>
           </div>
-
           <div className="pillar-card">
             <h3>Business & Market Access</h3>
             <p>
@@ -56,7 +63,6 @@ const About = () => {
               and support organisations.
             </p>
           </div>
-
           <div className="pillar-card">
             <h3>Technology Adoption</h3>
             <p>
@@ -64,7 +70,6 @@ const About = () => {
               digital marketing for businesses.
             </p>
           </div>
-
           <div className="pillar-card">
             <h3>Community Upliftment & Inclusion</h3>
             <p>
@@ -78,4 +83,4 @@ const About = () => {
   );
 };
 
-export default About
+export default About;
