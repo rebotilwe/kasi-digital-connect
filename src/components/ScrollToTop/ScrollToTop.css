@@ -1,0 +1,46 @@
+.scroll-to-top {
+  position: fixed;
+  right: 1.8rem;
+  bottom: 1.8rem;
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  border: none;
+  outline: none;
+  background: radial-gradient(circle at 30% 20%, #58a6ff 0%, #0057a8 38%, #050608 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.7);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease,
+    background 0.2s ease;
+  opacity: 0.92;
+  z-index: 1200;
+}
+
+.scroll-to-top svg {
+  font-size: 1rem;
+}
+
+.scroll-to-top:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.8);
+  background: radial-gradient(circle at 30% 20%, #ffb81c 0%, #007a33 38%, #050608 100%);
+  opacity: 1;
+}
+
+/* Slightly smaller on mobile */
+@media (max-width: 768px) {
+  .scroll-to-top {
+    right: 1.1rem;
+    bottom: 1.3rem;
+    width: 40px;
+    height: 40px;
+  }
+
+  .scroll-to-top svg {
+    font-size: 0.9rem;
+  }
+}

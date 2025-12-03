@@ -1,0 +1,108 @@
+.services-container {
+  padding: 4rem 8vw 5rem;
+  background: #050608;
+  color: #ffffff;
+}
+
+/* WRAP YOUR ROOT DIV WITH THIS CLASS INSTEAD OF INLINE STYLE
+   <div className="services-container">
+*/
+
+.services-container h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.services-container > p:first-of-type {
+  max-width: 780px;
+  font-size: 0.98rem;
+  line-height: 1.9;
+  color: #c8ccd8;
+  margin-bottom: 2.2rem;
+}
+
+/* SUBTITLE */
+
+.services-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.4rem;
+}
+
+/* SERVICES LIST AS CARDS */
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.6rem;
+  margin-bottom: 2.4rem;
+  list-style: none;
+  padding: 0;
+}
+
+.service-item {
+  background: #111318;
+  border-radius: 16px;
+  padding: 1.4rem 1.3rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.55);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.18s ease, box-shadow 0.18s ease,
+    border-color 0.18s ease;
+}
+
+/* accent strip at top */
+.service-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    #0057a8 0%,
+    #007a33 33%,
+    #ffb81c 66%,
+    #d0021b 100%
+  );
+}
+
+.service-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.6);
+  border-color: #0057a8;
+}
+
+/* Closing paragraph */
+
+.services-container > p:last-of-type {
+  max-width: 620px;
+  font-size: 0.96rem;
+  line-height: 1.8;
+  color: #d0d4e0;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1024px) {
+  .services-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .services-container {
+    padding: 3rem 6vw 4rem;
+  }
+
+  .services-container h1 {
+    font-size: 1.9rem;
+  }
+
+  .services-list {
+    grid-template-columns: 1fr;
+  }
+}

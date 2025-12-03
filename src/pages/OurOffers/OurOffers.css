@@ -1,0 +1,137 @@
+.offer-container {
+  padding: 4rem 8vw 5rem;
+  background: #050608;
+  color: #ffffff;
+}
+
+/* HERO */
+
+.offer-hero {
+  max-width: 900px;
+  margin: 0 auto 3.5rem;
+  text-align: left;
+}
+
+.offer-hero h1 {
+  font-size: 2.2rem;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+}
+
+.offer-hero p {
+  font-size: 0.98rem;
+  line-height: 1.9;
+  color: #c8ccd8;
+}
+
+/* GRID OF OFFERS */
+
+.offer-grid {
+  max-width: 1100px;
+  margin: 0 auto 3.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.6rem;
+}
+
+.offer-card {
+  background: #111318;
+  border-radius: 16px;
+  padding: 1.8rem 1.6rem 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.55);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.18s ease, box-shadow 0.18s ease,
+    border-color 0.18s ease;
+}
+
+/* Accent band on left of each card */
+.offer-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    #0057a8 0%,
+    #007a33 33%,
+    #ffb81c 66%,
+    #d0021b 100%
+  );
+}
+
+.offer-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.6rem;
+}
+
+.offer-card p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #c3c7d4;
+}
+
+.offer-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.6);
+  border-color: #0057a8;
+}
+
+/* CLOSING IMPACT SECTION */
+
+.offer-impact {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.8rem 2.4rem;
+  border-radius: 20px;
+  background: linear-gradient(
+    135deg,
+    #0057a8 0%,
+    #007a33 40%,
+    #ffb81c 75%,
+    #d0021b 100%
+  );
+  color: #ffffff;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65);
+  text-align: left;
+}
+
+.offer-impact h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.offer-impact p {
+  font-size: 1rem;
+  line-height: 1.9;
+  max-width: 680px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1024px) {
+  .offer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .offer-container {
+    padding: 3rem 6vw 4rem;
+  }
+
+  .offer-hero h1 {
+    font-size: 1.9rem;
+  }
+
+  .offer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .offer-impact {
+    padding: 2.2rem 1.8rem;
+  }
+}
