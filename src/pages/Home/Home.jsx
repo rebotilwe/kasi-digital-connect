@@ -9,6 +9,10 @@ const Home = () => {
     navigate("/about");
   };
 
+   const goToContact = () => {
+    navigate("/contact");
+  };
+
   return (
     <div className="home">
       {/* HERO SECTION */}
@@ -108,7 +112,7 @@ const Home = () => {
       <section className="cta-section">
         <h2>Be Part of the Movement</h2>
         <p>Join us in shaping the digital future of township economies.</p>
-        <button className="cta-btn" onClick={goToAbout}>Get Involved</button>
+        <button className="cta-btn" onClick={goToContact}>Get Involved</button>
       </section>
     </div>
   );
