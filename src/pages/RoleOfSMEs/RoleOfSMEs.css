@@ -2,10 +2,10 @@
   padding: 4rem 8vw 5rem;
   background: #050608;
   color: #ffffff;
+  font-family: "Inter", sans-serif;
 }
 
 /* HERO */
-
 .smes-hero {
   max-width: 900px;
   margin: 0 auto 3.5rem;
@@ -13,40 +13,45 @@
 }
 
 .smes-hero h1 {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   line-height: 1.25;
   margin-bottom: 1rem;
+  color: #58a6ff; /* hero accent */
 }
 
 .smes-hero p {
-  font-size: 0.98rem;
-  line-height: 1.9;
+  font-size: 1rem;
+  line-height: 1.8;
   color: #c8ccd8;
 }
 
-/* GENERIC SECTION WRAPPER */
-
+/* SECTION WRAPPER */
 .smes-section {
   max-width: 900px;
   margin: 0 auto 3rem;
-  padding: 2.2rem 2.4rem;
+  padding: 2.4rem 2.4rem;
   border-radius: 18px;
   background: #111318;
   border: 1px solid rgba(255, 255, 255, 0.06);
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .smes-section:nth-of-type(odd) {
   background: #161921;
 }
 
+.smes-section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.6);
+}
+
 .smes-section h2 {
-  font-size: 1.4rem;
-  margin-bottom: 1.3rem;
+  font-size: 1.5rem;
+  margin-bottom: 1.4rem;
 }
 
 /* LISTS */
-
 .smes-section ul {
   list-style: none;
   margin: 0;
@@ -62,7 +67,6 @@
   color: #d0d4e0;
 }
 
-/* Custom bullet using primary accent */
 .smes-section li::before {
   content: "";
   position: absolute;
@@ -71,7 +75,7 @@
   width: 8px;
   height: 8px;
   border-radius: 999px;
-  background: #0057a8; /* blue accent */
+  background: #0057a8; /* primary accent */
 }
 
 .smes-section strong {
@@ -79,11 +83,10 @@
 }
 
 /* IMPACT BLOCK */
-
 .smes-impact {
   max-width: 900px;
   margin: 0 auto;
-  padding: 2.8rem 2.4rem;
+  padding: 3rem 2.4rem;
   border-radius: 20px;
   background: linear-gradient(
     135deg,
@@ -109,6 +112,11 @@
 }
 
 /* RESPONSIVE */
+@media (max-width: 1024px) {
+  .smes-section {
+    padding: 2rem 1.8rem;
+  }
+}
 
 @media (max-width: 768px) {
   .smes-container {
@@ -116,11 +124,30 @@
   }
 
   .smes-hero h1 {
-    font-size: 1.9rem;
+    font-size: 2rem;
   }
 
   .smes-section,
   .smes-impact {
     padding: 2rem 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .smes-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .smes-section h2,
+  .smes-impact h2 {
+    font-size: 1.4rem;
+  }
+
+  .smes-section li {
+    font-size: 0.9rem;
+  }
+
+  .smes-impact p {
+    font-size: 0.95rem;
   }
 }

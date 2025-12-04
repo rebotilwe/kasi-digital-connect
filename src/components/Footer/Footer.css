@@ -1,105 +1,81 @@
 .footer {
-  background: #050608;
-  border-top: 1px solid #111318;
-  padding: 3rem 8vw 1.5rem;
-  color: #f5f5f5;
-  font-size: 0.9rem;
+  background: #111318; /* dark background to match page */
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  padding: 3rem 8vw 2rem;
 }
 
 .footer-container {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 2.5rem;
-  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
-/* Column titles */
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
 .footer-section h3 {
-  font-size: 1rem;
+  font-size: 1.2rem;
+  color: #ffd700; /* yellow accent from SA flag */
   margin-bottom: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  color: #9fb8ff; /* soft blue accent */
 }
 
-/* Lists */
 .footer-section ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.footer-section li {
-  margin-bottom: 0.4rem;
+.footer-section ul li {
+  margin-bottom: 0.6rem;
 }
 
+.footer-section ul li a {
+  color: #c8ccd8;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #0057a8; /* blue accent from SA flag */
+}
+
+.footer-section p,
 .footer-section a {
   color: #c8ccd8;
   text-decoration: none;
   transition: color 0.2s ease;
-  font-weight: 400;
 }
 
 .footer-section a:hover {
-  color: #ffffff;
+  color: #007a33; /* green accent */
 }
 
-/* Text */
-.footer-section p {
-  margin: 0 0 0.4rem;
-  color: #b7bbc7;
-}
-
-/* Social links in one line */
+/* Social links inline */
 .footer-section p a {
-  font-weight: 500;
+  margin-right: 0.5rem;
 }
 
-/* Bottom strip */
 .footer-bottom {
-  border-top: 1px solid #111318;
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #888;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #8b90a0;
-  font-size: 0.8rem;
 }
 
-/* Optional: add a subtle “flag bar” accent on the left */
-.footer-bottom::before {
-  content: "";
-  display: inline-block;
-  width: 80px;
-  height: 3px;
-  margin-right: 0.75rem;
-  background: linear-gradient(
-    90deg,
-    #007a33 0%,
-    #ffb81c 33%,
-    #d0021b 66%,
-    #0057a8 100%
-  );
-}
-
-/* Stack on mobile */
+/* Responsive */
 @media (max-width: 768px) {
-  .footer {
-    padding: 2.5rem 6vw 1.2rem;
-  }
-
   .footer-container {
-    grid-template-columns: 1fr;
-    gap: 1.8rem;
-  }
-
-  .footer-bottom {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
+    gap: 1.5rem;
   }
 
-  .footer-bottom::before {
-    margin-bottom: 0.4rem;
+  .footer-section {
+    min-width: 100%;
   }
 }

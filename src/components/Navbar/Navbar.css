@@ -12,9 +12,9 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 3rem;
-  background: rgba(0, 0, 0, 0.94);
-  border-bottom: 1px solid #111318;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(90deg, #ffb81c, #007a33, #0057a8); /* subtle flag colors */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -27,8 +27,13 @@ body {
 }
 
 .nav-logo {
-  height: 100px;
+  height: 70px;
   width: auto;
+  transition: transform 0.3s ease;
+}
+
+.nav-logo:hover {
+  transform: scale(1.05);
 }
 
 /* NAV LINKS */
@@ -42,13 +47,13 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: #f5f5f5;
-  font-weight: 500;
-  font-size: 0.9rem;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  transition: color 0.2s ease;
   position: relative;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .nav-links a::after {
@@ -58,8 +63,13 @@ body {
   bottom: -0.35rem;
   width: 0;
   height: 2px;
-  background: #0057a8;
+  background: #ffd700; /* yellow accent */
   transition: width 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: #ffeb3b; /* subtle yellow highlight */
+  transform: translateY(-1px);
 }
 
 .nav-links a:hover::after {
@@ -68,28 +78,37 @@ body {
 
 /* CONTACT BUTTON */
 .btn-contact {
-  padding: 0.5rem 1rem;
-  background: #0057a8;
+  padding: 0.5rem 1.2rem;
+  background: #0057a8; /* blue from flag */
   color: #fff !important;
   border-radius: 999px;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.85rem;
   text-transform: uppercase;
   border: none;
-  transition: background 0.2s ease, transform 0.15s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
 }
 
 .btn-contact:hover {
-  background: #007a33;
+  background: #ffb81c; /* yellow accent on hover */
   transform: translateY(-1px);
+  color: #050608;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.55);
 }
 
-/* Mobile version of contact link */
+/* MOBILE CONTACT LINK */
 .mobile-contact {
-  display: none; /* hidden on desktop */
-  border-radius: 0;
-  background: transparent;
+  display: none;
   color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.8rem 0;
+  transition: color 0.2s ease;
+}
+
+.mobile-contact:hover {
+  color: #ffeb3b;
 }
 
 /* HAMBURGER MENU */
@@ -97,13 +116,14 @@ body {
   display: none;
   flex-direction: column;
   cursor: pointer;
-  gap: 5px;
+  gap: 4px;
 }
 
 .hamburger div {
-  width: 25px;
+  width: 22px;
   height: 3px;
   background-color: #fff;
+  border-radius: 2px;
   transition: all 0.3s ease;
 }
 
@@ -115,50 +135,46 @@ body {
     gap: 1.5rem;
   }
   .nav-logo {
-    height: 80px;
+    height: 60px;
   }
 }
 
-/* Mobile devices */
+/* MOBILE MENU OVERLAY */
 @media (max-width: 768px) {
-  .navbar {
-    padding: 0.8rem 1.4rem;
-  }
-
   .nav-links {
-    position: absolute; /* overlay the menu */
-    top: 100%;          /* right below navbar */
+    position: fixed; /* full screen overlay */
+    top: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 1);
+    height: 100vh; /* full height */
+    background: rgba(5, 6, 8, 0.98); /* semi-transparent dark */
     flex-direction: column;
     align-items: center;
-    overflow: hidden;
-    max-height: 0;
+    justify-content: center; /* center links vertically */
+    overflow-y: auto;
+    max-height: none;
     padding: 0;
-    transition: max-height 0.3s ease-in-out;
-    z-index: 999;
+    transform: translateX(-100%); /* hide off-screen initially */
+    transition: transform 0.3s ease-in-out;
+    z-index: 2000; /* on top of everything */
   }
 
   .nav-links.active {
-    max-height: 500px;
+    transform: translateX(0); /* slide in when active */
+  }
+
+  .nav-links a,
+  .mobile-contact {
     padding: 1rem 0;
+    font-size: 1.2rem;
   }
 
-  .nav-links a {
-    padding: 0.8rem 0;
-    font-size: 1rem;
-  }
-
-  /* Hide desktop blue button on mobile */
   .btn-contact {
-    display: none;
+    display: none; /* hide desktop button */
   }
 
   .mobile-contact {
     display: block;
-    padding: 0.8rem 0;
-    font-size: 1rem;
   }
 
   .hamburger {
@@ -166,16 +182,14 @@ body {
   }
 }
 
+
 /* Extra small devices (phones) */
 @media (max-width: 480px) {
   .nav-logo {
-    height: 60px;
+    height: 50px;
   }
 
-  .nav-links a {
-    font-size: 0.95rem;
-  }
-
+  .nav-links a,
   .mobile-contact {
     font-size: 0.95rem;
   }

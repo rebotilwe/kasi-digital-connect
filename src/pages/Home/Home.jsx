@@ -9,8 +9,6 @@ const Home = () => {
     navigate("/about");
   };
 
-  
-
   return (
     <div className="home">
       {/* HERO SECTION */}
@@ -64,14 +62,53 @@ const Home = () => {
         </div>
       </section>
 
+      {/* SPONSORSHIP SECTION */}
+      <section className="sponsorship-section">
+        <h2>Sponsorship Opportunities</h2>
+        <p className="sponsorship-intro">
+          Partner with us in driving economic transformation through digital empowerment!
+        </p>
 
+        <div className="sponsorship-cards">
+          <div className="sponsorship-card">
+            <h3>Diamond</h3>
+            <p className="investment">R 1,200,000 – R 800,000 (€60,000 – €40,000)</p>
+            <p className="benefits">
+              Keynote speaking slot, branding across event marketing, prime exhibition space, media coverage, and contribution to National Imperatives.
+            </p>
+          </div>
 
+          <div className="sponsorship-card">
+            <h3>Gold</h3>
+            <p className="investment">R 650,000 – R 450,000 (€32,500 – €22,500)</p>
+            <p className="benefits">
+              Panel discussion participation, co-branded workshops, logo placement on event materials and contribution to National Imperatives.
+            </p>
+          </div>
+
+          <div className="sponsorship-card">
+            <h3>Silver</h3>
+            <p className="investment">R 350,000 – R 200,000 (€17,500 – €10,000)</p>
+            <p className="benefits">
+              Exhibition space, branding on select event materials, social media features and contribution to National Imperatives.
+            </p>
+          </div>
+
+          <div className="sponsorship-card">
+            <h3>Bronze</h3>
+            <p className="investment">R 150,000 – R 100,000 (€7,500 – €5,000)</p>
+            <p className="benefits">
+              Logo on event banners, social media mentions, brand visibility on website and contribution to National Imperatives.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* CTA SECTION */}
       <section className="cta-section">
         <h2>Be Part of the Movement</h2>
         <p>Join us in shaping the digital future of township economies.</p>
-   
+        <button className="cta-btn" onClick={goToAbout}>Get Involved</button>
       </section>
     </div>
   );

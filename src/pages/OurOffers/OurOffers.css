@@ -1,11 +1,11 @@
 .offer-container {
   padding: 4rem 8vw 5rem;
   background: #050608;
-  color: #ffffff;
+  color: #fff;
+  font-family: "Inter", sans-serif;
 }
 
 /* HERO */
-
 .offer-hero {
   max-width: 900px;
   margin: 0 auto 3.5rem;
@@ -13,40 +13,38 @@
 }
 
 .offer-hero h1 {
-  font-size: 2.2rem;
-  line-height: 1.25;
+  font-size: 2.4rem;
   margin-bottom: 1rem;
+  color: #58a6ff; /* accent color */
 }
 
 .offer-hero p {
-  font-size: 0.98rem;
-  line-height: 1.9;
+  font-size: 1rem;
+  line-height: 1.8;
   color: #c8ccd8;
 }
 
 /* GRID OF OFFERS */
-
 .offer-grid {
   max-width: 1100px;
   margin: 0 auto 3.5rem;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.6rem;
+  gap: 1.8rem;
 }
 
 .offer-card {
   background: #111318;
-  border-radius: 16px;
-  padding: 1.8rem 1.6rem 2rem;
+  border-radius: 18px;
+  padding: 2rem 1.6rem 2.2rem;
   border: 1px solid rgba(255, 255, 255, 0.06);
   box-shadow: 0 18px 38px rgba(0, 0, 0, 0.55);
   position: relative;
   overflow: hidden;
-  transition: transform 0.18s ease, box-shadow 0.18s ease,
-    border-color 0.18s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-/* Accent band on left of each card */
+/* Accent band on left */
 .offer-card::before {
   content: "";
   position: absolute;
@@ -64,28 +62,28 @@
 }
 
 .offer-card h3 {
-  font-size: 1.05rem;
-  margin-bottom: 0.6rem;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: #ffd700; /* subtle highlight */
 }
 
 .offer-card p {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   line-height: 1.7;
   color: #c3c7d4;
 }
 
 .offer-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.65);
   border-color: #0057a8;
 }
 
 /* CLOSING IMPACT SECTION */
-
 .offer-impact {
   max-width: 900px;
   margin: 0 auto;
-  padding: 2.8rem 2.4rem;
+  padding: 3rem 2.5rem;
   border-radius: 20px;
   background: linear-gradient(
     135deg,
@@ -94,7 +92,7 @@
     #ffb81c 75%,
     #d0021b 100%
   );
-  color: #ffffff;
+  color: #fff;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65);
   text-align: left;
 }
@@ -111,7 +109,6 @@
 }
 
 /* RESPONSIVE */
-
 @media (max-width: 1024px) {
   .offer-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -124,7 +121,7 @@
   }
 
   .offer-hero h1 {
-    font-size: 1.9rem;
+    font-size: 2rem;
   }
 
   .offer-grid {
@@ -133,5 +130,24 @@
 
   .offer-impact {
     padding: 2.2rem 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .offer-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .offer-impact h2 {
+    font-size: 1.4rem;
+  }
+
+  .offer-card h3 {
+    font-size: 1rem;
+  }
+
+  .offer-card p,
+  .offer-impact p {
+    font-size: 0.9rem;
   }
 }

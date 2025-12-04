@@ -1,162 +1,113 @@
+/* Overall Container */
 .about-container {
-  padding: 4rem 8vw 5rem;
-  background: #050608;
-  color: #ffffff;
+  background-color: #050608;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  padding: 0 8vw 4rem;
 }
 
-/* HERO */
+/* HERO SECTION */
 .about-hero {
-  max-width: 900px;
-  margin: 0 auto 3rem;
+  padding: 4rem 0;
+  text-align: center;
+  background: radial-gradient(circle at top left, #0b1a33 0, #050608 70%);
 }
 
 .about-hero h1 {
-  font-size: 2.2rem;
-  line-height: 1.25;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
+  color: #58a6ff; /* light blue accent */
 }
 
 .about-hero p {
-  font-size: 0.98rem;
-  line-height: 1.9;
-  color: #c8ccd8;
+  font-size: 1.05rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+  color: #d0d4e0;
 }
 
 /* VIDEO SECTION */
 .about-video {
-  max-width: 1100px;
-  margin: 0 auto 3.2rem;
-  background: #111318;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 18px;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
-  padding: 1.6rem 1.6rem 1.2rem;
+  margin: 3rem 0;
+  text-align: center;
 }
 
 .about-video h2 {
-  font-size: 1.4rem;
-  margin: 0 0 1rem;
-}
-
-/* responsive video wrapper (16:9) */
-.about-video .video-wrapper {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;           /* Modern browsers */
-  background: #0b0e16;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-/* Fallback for older browsers without aspect-ratio */
-@supports not (aspect-ratio: 16 / 9) {
-  .about-video .video-wrapper {
-    height: 0;
-    padding-bottom: 56.25%;
-  }
-  .about-video .video-wrapper > * {
-    position: absolute;
-    inset: 0;
-    height: 100%;
-    width: 100%;
-  }
+  font-size: 1.8rem;
+  color: #ffd700; /* yellow accent */
+  margin-bottom: 1rem;
 }
 
 .about-video video {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: #000;
-  object-fit: cover;
   border-radius: 12px;
+  max-width: 100%;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.55);
 }
 
-/* optional: tweak native controls color on WebKit */
-.about-video video::-webkit-media-controls-panel {
-  background: rgba(0, 0, 0, 0.25);
-}
-
-/* GENERIC SECTIONS (Mission, Vision) */
+/* MISSION & VISION SECTIONS */
 .about-section {
-  max-width: 900px;
-  margin: 0 auto 2.5rem;
-  padding: 2.2rem 2.4rem;
-  border-radius: 18px;
-  background: #111318;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
-}
-
-.about-section:nth-of-type(even) {
-  background: #161921;
+  margin: 3rem 0;
 }
 
 .about-section h2 {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
+  color: #007a33; /* green accent */
   margin-bottom: 1rem;
 }
 
 .about-section p {
-  font-size: 0.96rem;
+  max-width: 720px;
   line-height: 1.8;
-  color: #d0d4e0;
+  font-size: 1rem;
+  color: #c8ccd8;
 }
 
 /* PILLARS / OBJECTIVES */
 .about-pillars {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding-top: 0.8rem;
+  margin: 4rem 0;
 }
 
 .about-pillars h2 {
-  font-size: 1.6rem;
-  margin-bottom: 1.6rem;
+  font-size: 1.9rem;
+  color: #58a6ff;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
+/* Grid for pillar cards */
 .pillars-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1.6rem;
+  gap: 1.8rem;
 }
 
 .pillar-card {
   background: #111318;
-  border-radius: 16px;
-  padding: 1.8rem 1.6rem;
+  border-radius: 14px;
+  padding: 1.6rem 1.4rem;
   border: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.55);
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
-}
-
-/* Accent bar at top with brand colors */
-.pillar-card::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(90deg, #0057a8 0%, #007a33 33%, #ffb81c 66%, #d0021b 100%);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.45);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  text-align: center;
 }
 
 .pillar-card h3 {
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   margin-bottom: 0.6rem;
+  color: #ffd700; /* yellow accent */
 }
 
 .pillar-card p {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  color: #c8ccd8;
   line-height: 1.7;
-  color: #c3c7d4;
 }
 
 .pillar-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.6);
-  border-color: #0057a8;
+  transform: translateY(-5px);
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.55);
+  border-color: #0057a8; /* blue accent */
 }
 
 /* RESPONSIVE */
@@ -166,24 +117,24 @@
   }
 }
 
-@media (max-width: 768px) {
-  .about-container {
-    padding: 3rem 6vw 4rem;
-  }
-
+@media (max-width: 640px) {
   .about-hero h1 {
-    font-size: 1.9rem;
+    font-size: 2rem;
   }
 
-  .about-video { 
-    padding: 1.2rem;
-  }
-
-  .about-section {
-    padding: 2rem 1.8rem;
+  .about-video h2,
+  .about-section h2,
+  .about-pillars h2 {
+    font-size: 1.6rem;
   }
 
   .pillars-grid {
     grid-template-columns: 1fr;
+  }
+
+  .about-hero p,
+  .about-section p,
+  .pillar-card p {
+    font-size: 0.95rem;
   }
 }

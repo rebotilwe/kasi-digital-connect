@@ -2,29 +2,30 @@
   padding: 4rem 8vw 5rem;
   background: #050608;
   color: #ffffff;
+  font-family: "Inter", sans-serif;
 }
 
 /* HERO */
-
 .stands-hero {
   max-width: 900px;
   margin: 0 auto 3.5rem;
+  text-align: left;
 }
 
 .stands-hero h1 {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   line-height: 1.25;
   margin-bottom: 1rem;
+  color: #58a6ff; /* hero accent */
 }
 
 .stands-hero p {
-  font-size: 0.98rem;
-  line-height: 1.9;
+  font-size: 1rem;
+  line-height: 1.8;
   color: #c8ccd8;
 }
 
 /* FEATURES GRID */
-
 .stands-grid {
   max-width: 1100px;
   margin: 0 auto 3.5rem;
@@ -80,7 +81,6 @@
 }
 
 /* CLOSING IMPACT STRIP */
-
 .stands-impact {
   max-width: 900px;
   margin: 0 auto;
@@ -110,7 +110,6 @@
 }
 
 /* RESPONSIVE */
-
 @media (max-width: 1024px) {
   .stands-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));

@@ -1,7 +1,9 @@
+/* Container */
 .contact-container {
   padding: 4rem 8vw 5rem;
   background: #050608;
-  color: #ffffff;
+  color: #fff;
+  font-family: "Inter", sans-serif;
 }
 
 /* HERO */
@@ -12,14 +14,15 @@
 }
 
 .contact-hero h1 {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   margin-bottom: 1rem;
+  color: #58a6ff; /* blue accent */
 }
 
 .contact-hero p {
-  font-size: 0.98rem;
-  line-height: 1.9;
-  color: #c8ccd8;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #d0d4e0;
 }
 
 /* FORM + INFO LAYOUT */
@@ -30,13 +33,10 @@
   grid-template-columns: 1.7fr 1fr;
   gap: 2rem;
   align-items: flex-start;
-  padding: 0;              /* remove extra horizontal padding */
-  box-sizing: border-box;  /* ensure padding doesn't blow out width */
 }
 
-/* Make sure children cannot overflow the grid cell */
-.contact-form,
-.contact-info {
+/* Form */
+.contact-form {
   width: 100%;
   box-sizing: border-box;
 }
@@ -44,7 +44,7 @@
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 0.8rem 0.9rem;
+  padding: 0.85rem 1rem;
   border-radius: 10px;
   border: 1px solid #2a2f3a;
   background: #050608;
@@ -52,9 +52,8 @@
   font-size: 0.95rem;
   outline: none;
   transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-  margin-bottom: 1rem; /* add space between fields */
+  margin-bottom: 1rem;
 }
-
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
@@ -74,21 +73,19 @@
 }
 
 .contact-form button {
-  margin-top: 0.4rem;
-  align-self: flex-start;
-  padding: 0.85rem 1.9rem;
+  margin-top: 0.5rem;
+  padding: 0.85rem 2rem;
   border-radius: 999px;
   border: none;
   background: #0057a8;
-  color: #ffffff;
+  color: #fff;
   font-weight: 600;
   font-size: 0.9rem;
-  letter-spacing: 0.12em;
   text-transform: uppercase;
+  letter-spacing: 0.12em;
   cursor: pointer;
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
-  transition: background 0.2s ease, transform 0.15s ease,
-    box-shadow 0.2s ease;
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
 }
 
 .contact-form button:hover {
@@ -97,28 +94,29 @@
   box-shadow: 0 16px 45px rgba(0, 0, 0, 0.7);
 }
 
-/* CONTACT INFO PANEL */
+/* Contact Info Panel */
 .contact-info {
   background: #0b0e16;
   border-radius: 18px;
-  padding: 2rem 2rem;
+  padding: 2rem;
   border: 1px solid rgba(255, 255, 255, 0.07);
   box-shadow: 0 18px 38px rgba(0, 0, 0, 0.55);
 }
 
 .contact-info h3 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   margin-bottom: 1rem;
+  color: #ffd700; /* yellow accent */
 }
 
 .contact-info p {
-  margin: 0 0 0.6rem;
-  font-size: 0.94rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
   color: #c8ccd8;
 }
 
 .contact-info a {
-  color: #9fb8ff;
+  color: #58a6ff;
   text-decoration: none;
 }
 
@@ -129,7 +127,7 @@
 /* RESPONSIVE */
 
 /* Tablet */
-@media (max-width: 900px) {
+@media (max-width: 960px) {
   .contact-form-section {
     grid-template-columns: 1fr;
   }
@@ -142,19 +140,19 @@
   }
 
   .contact-hero h1 {
-    font-size: 1.9rem;
+    font-size: 2rem;
   }
 
   .contact-form,
   .contact-info {
-    padding: 2rem 1.6rem;
+    padding: 1.8rem 1.5rem;
   }
 }
 
-/* Extra small devices (phones) */
+/* Extra small devices */
 @media (max-width: 480px) {
   .contact-hero h1 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   .contact-hero p {
@@ -171,7 +169,7 @@
   }
 
   .contact-info {
-    padding: 1.5rem 1.5rem;
+    padding: 1.5rem;
   }
 
   .contact-info h3 {
@@ -180,10 +178,5 @@
 
   .contact-info p {
     font-size: 0.88rem;
-  }
-}
-@media (max-width: 960px) {
-  .contact-form-section {
-    grid-template-columns: 1fr;
   }
 }

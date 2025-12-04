@@ -1,63 +1,60 @@
+/* Container */
 .research-container {
   padding: 4rem 8vw 5rem;
   background: #050608;
-  color: #ffffff;
+  color: #fff;
+  font-family: "Inter", sans-serif;
 }
 
 /* HERO */
-
 .research-hero {
   max-width: 900px;
   margin: 0 auto 3.5rem;
+  text-align: center;
 }
 
 .research-hero h1 {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   line-height: 1.25;
   margin-bottom: 1rem;
+  color: #58a6ff; /* blue accent */
 }
 
 .research-hero p {
-  font-size: 0.98rem;
+  font-size: 1rem;
   line-height: 1.9;
-  color: #c8ccd8;
+  color: #d0d4e0;
 }
 
-/* SECTION WRAPPER */
-
-.research-section {
-  max-width: 1100px;
-  margin: 0 auto 3.5rem;
-}
-
-.research-section h2 {
-  font-size: 1.6rem;
+/* SECTION HEADER */
+.research-section h2,
+.research-conclusion h2,
+.research-references h2 {
+  font-size: 1.8rem;
   margin-bottom: 1.8rem;
+  color: #ffd700; /* yellow accent */
+  text-align: center;
 }
 
 /* CARDS */
-
 .research-card {
   background: #111318;
-  border-radius: 18px;
-  padding: 1.8rem 1.6rem 2rem;
+  border-radius: 14px;
+  padding: 2rem 1.6rem;
   border: 1px solid rgba(255, 255, 255, 0.06);
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+  margin-bottom: 1.8rem;
   position: relative;
-  overflow: hidden;
-  margin-bottom: 1.6rem;
-  transition: transform 0.18s ease, box-shadow 0.18s ease,
-    border-color 0.18s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-/* subtle “data bar” at top */
 .research-card::before {
   content: "";
   position: absolute;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
-  height: 3px;
+  height: 4px;
   background: linear-gradient(
     90deg,
     #0057a8 0%,
@@ -68,105 +65,110 @@
 }
 
 .research-card h3 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   margin-bottom: 0.8rem;
+  color: #ffd700;
 }
 
 .research-card ul {
   list-style: none;
+  padding-left: 0;
   margin: 0;
-  padding: 0;
 }
 
 .research-card li {
   position: relative;
-  padding-left: 1.4rem;
-  margin-bottom: 0.6rem;
-  font-size: 0.92rem;
+  padding-left: 1.5rem;
+  margin-bottom: 0.7rem;
+  font-size: 0.95rem;
   line-height: 1.7;
-  color: #d0d4e0;
+  color: #c8ccd8;
 }
 
-/* bullet for list items */
 .research-card li::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 0.55rem;
-  width: 7px;
-  height: 7px;
+  top: 0.6rem;
+  width: 8px;
+  height: 8px;
   border-radius: 999px;
-  background: #58a6ff;
+  background: #007a33; /* green bullet */
 }
 
 .research-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   box-shadow: 0 22px 50px rgba(0, 0, 0, 0.6);
-  border-color: #0057a8;
+  border-color: #58a6ff;
 }
 
 /* CONCLUSION */
-
 .research-conclusion {
   max-width: 900px;
   margin: 0 auto 3rem;
-  padding: 2.4rem 2.4rem;
-  border-radius: 18px;
+  padding: 2.4rem;
+  border-radius: 14px;
   background: #111318;
   border: 1px solid rgba(255, 255, 255, 0.06);
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
 }
 
-.research-conclusion h2 {
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-}
-
 .research-conclusion p {
-  font-size: 0.96rem;
+  font-size: 1rem;
   line-height: 1.8;
   color: #d0d4e0;
 }
 
 /* REFERENCES */
-
 .research-references {
   max-width: 900px;
   margin: 0 auto;
   padding: 2.4rem 2.4rem 0;
 }
 
-.research-references h2 {
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-}
-
 .research-references ol {
   margin: 0;
-  padding-left: 1.2rem;
+  padding-left: 1.5rem;
   color: #c8ccd8;
   font-size: 0.9rem;
   line-height: 1.8;
 }
 
 .research-references li {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
 }
 
 /* RESPONSIVE */
+@media (max-width: 1024px) {
+  .research-hero h1 {
+    font-size: 2rem;
+  }
 
-@media (max-width: 768px) {
+  .research-section h2,
+  .research-conclusion h2,
+  .research-references h2 {
+    font-size: 1.6rem;
+  }
+
+  .research-card {
+    padding: 1.8rem 1.4rem;
+  }
+}
+
+@media (max-width: 640px) {
   .research-container {
     padding: 3rem 6vw 4rem;
   }
 
   .research-hero h1 {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
   }
 
-  .research-card,
-  .research-conclusion,
-  .research-references {
-    padding: 2rem 1.6rem;
+  .research-card h3 {
+    font-size: 1.05rem;
+  }
+
+  .research-card li {
+    font-size: 0.9rem;
   }
 }
