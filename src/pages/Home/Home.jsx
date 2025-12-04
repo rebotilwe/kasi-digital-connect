@@ -71,7 +71,7 @@ const Home = () => {
 
       {/* TEAM SECTION */}
    {/* TEAM SECTION */}
-<section className="team-section">
+{/* <section className="team-section">
   <h2>Meet Our Team</h2>
   <div className="team-grid">
     {teamMembers.map((member, index) => (
@@ -80,14 +80,14 @@ const Home = () => {
       </div>
     ))}
   </div>
-</section>
+</section> */}
 
 
       {/* CTA SECTION */}
       <section className="cta-section">
         <h2>Be Part of the Movement</h2>
         <p>Join us in shaping the digital future of township economies.</p>
-        <button className="cta-btn">Become a Sponsor</button>
+        {/* <button className="cta-btn">Become a Sponsor</button> */}
       </section>
     </div>
   );
