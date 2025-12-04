@@ -6,11 +6,8 @@ import logo from "../../assets/logo.png";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Close mobile menu after clicking a link
   const handleLinkClick = () => {
-    if (isOpen) {
-      setIsOpen(false);
-    }
+    if (isOpen) setIsOpen(false);
   };
 
   return (
@@ -29,7 +26,11 @@ const Navbar = () => {
         <li><Link to="/services" onClick={handleLinkClick}>Services</Link></li>
         <li><Link to="/analysis" onClick={handleLinkClick}>Research</Link></li>
         <li>
-          <Link to="/contact" className="btn-contact" onClick={handleLinkClick}>
+          <Link
+            to="/contact"
+            className={isOpen ? "mobile-contact" : "btn-contact"}
+            onClick={handleLinkClick}
+          >
             Contact
           </Link>
         </li>
