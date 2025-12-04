@@ -9,12 +9,7 @@ const Home = () => {
     navigate("/about");
   };
 
-  const teamMembers = [
-    { src: "/assets/Dineshri.png", alt: "Dineshri" },
-    { src: "/assets/Edward.png", alt: "Edward" },
-    { src: "/assets/InformationDesk.png", alt: "Information Desk" },
-    { src: "/assets/JoshIndarjee.png", alt: "Josh Indarjee" },
-  ];
+  
 
   return (
     <div className="home">
