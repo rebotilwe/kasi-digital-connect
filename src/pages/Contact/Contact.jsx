@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from "react"; 
 import "./Contact.css";
 
 const Contact = () => {
@@ -15,7 +15,6 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // For now, just log the data
     console.log(formData);
     alert("Thank you! Your message has been submitted.");
     setFormData({ name: "", email: "", subject: "", message: "" });
@@ -23,11 +22,15 @@ const Contact = () => {
 
   return (
     <div className="contact-container">
+      {/* Hero Section */}
       <section className="contact-hero">
         <h1>Contact Us</h1>
-        <p>Have questions or want to get involved? Fill out the form below, and we’ll get back to you as soon as possible.</p>
+        <p>
+          Have questions or want to get involved? Fill out the form below, and we’ll get back to you as soon as possible.
+        </p>
       </section>
 
+      {/* Form + Info Section */}
       <section className="contact-form-section">
         <form onSubmit={handleSubmit} className="contact-form">
           <input
@@ -65,9 +68,23 @@ const Contact = () => {
 
         <div className="contact-info">
           <h3>Or Reach Us Directly:</h3>
-          <p>Email: <a href="mailto:info@kasidigitalconnect.co.za">info@kasidigitalconnect.co.za</a></p>
+          <p>Address: 48 Fountains, 28 Graham Road, Lombardy Estate, Pretoria, 0081</p>
+          <p>Email: <a href="mailto:info@kasiconnect.co.za">info@kasiconnect.co.za</a></p>
           <p>Phone: +27 12 345 6789</p>
           <p>Follow us on Social Media: Instagram | LinkedIn | Twitter</p>
+
+          {/* Map Embed */}
+          <div className="contact-map">
+            <iframe
+              title="KasiConnect Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3578.123456789!2d28.178123!3d-25.750123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e956123456789ab%3A0xc123456789abcdef!2s48%20Fountains%2C%2028%20Graham%20Rd%2C%20Lombardy%20Estate%2C%20Pretoria!5e0!3m2!1sen!2sza!4v1700000000000!5m2!1sen!2sza"
+              width="100%"
+              height="300"
+              style={{ border: 0, borderRadius: "12px" }}
+              allowFullScreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
         </div>
       </section>
     </div>

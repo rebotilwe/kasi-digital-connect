@@ -1,26 +1,28 @@
 .footer {
-  background: #111318; /* dark background to match page */
+  background: #111318;
   color: #fff;
   font-family: "Inter", sans-serif;
-  padding: 3rem 8vw 2rem;
+  padding: 2rem 6vw 1.5rem; /* reduced padding */
+  border-top: 2px solid #0057a8;
 }
 
 .footer-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .footer-section {
   flex: 1;
-  min-width: 200px;
+  min-width: 180px; /* slightly smaller */
 }
 
 .footer-section h3 {
-  font-size: 1.2rem;
-  color: #ffd700; /* yellow accent from SA flag */
-  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #ffd700;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.4px;
 }
 
 .footer-section ul {
@@ -30,52 +32,66 @@
 }
 
 .footer-section ul li {
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
 }
 
 .footer-section ul li a {
   color: #c8ccd8;
   text-decoration: none;
-  transition: color 0.2s ease;
+  font-size: 0.9rem;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .footer-section ul li a:hover {
-  color: #0057a8; /* blue accent from SA flag */
+  color: #58a6ff;
+  transform: translateX(3px);
 }
 
 .footer-section p,
 .footer-section a {
   color: #c8ccd8;
   text-decoration: none;
-  transition: color 0.2s ease;
+  line-height: 1.5;
+  font-size: 0.9rem;
 }
 
 .footer-section a:hover {
-  color: #007a33; /* green accent */
+  color: #007a33;
+  text-decoration: underline;
 }
 
-/* Social links inline */
 .footer-section p a {
-  margin-right: 0.5rem;
+  margin-right: 0.4rem;
 }
 
 .footer-bottom {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   text-align: center;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: #888;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 1rem;
+  padding-top: 0.8rem;
+  letter-spacing: 0.4px;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
   }
 
   .footer-section {
     min-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-section h3 {
+    font-size: 1rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.75rem;
   }
 }

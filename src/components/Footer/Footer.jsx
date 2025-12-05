@@ -24,7 +24,8 @@ const Footer = () => {
         {/* Contact Info */}
         <div className="footer-section">
           <h3>Contact Info</h3>
-          <p>Email: <a href="mailto:info@kasidigitalconnect.co.za">info@kasidigitalconnect.co.za</a></p>
+          <p>Address: 48 Fountains, 28 Graham Road, Lombardy Estate, Pretoria, 0081</p>
+          <p>Email: <a href="mailto:info@kasiconnect.co.za">info@kasiconnect.co.za</a></p>
           <p>Phone: +27 12 345 6789</p>
         </div>
 
@@ -41,9 +42,9 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-    <p>
-    © {new Date().getFullYear()} Kasi Digital Connect. All rights reserved. | Developed by Afribiz Connect
-  </p>
+        <p>
+          © {new Date().getFullYear()} Kasi Digital Connect. All rights reserved. | Developed by Afribiz Connect
+        </p>
       </div>
     </footer>
   );

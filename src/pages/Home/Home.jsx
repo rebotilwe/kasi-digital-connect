@@ -2,6 +2,70 @@ import React from "react";
 import "./Home.css";
 import { useNavigate } from "react-router-dom";
 
+const homeFeatures = [
+  {
+    title: "Empowering Communities",
+    description:
+      "KasiConnect bridges the gap between traditional business and the digital economy.",
+  },
+  {
+    title: "Digital Solutions",
+    description:
+      "Our platform connects buyers, sellers, service providers, and renters for seamless transactions.",
+  },
+  {
+    title: "Inclusive Growth",
+    description:
+      "We transform township markets into accessible and competitive digital ecosystems.",
+  },
+];
+
+const featureCards = [
+  {
+    title: "Digital Skills",
+    description: "Training on e-commerce, financial literacy, digital payments, and more.",
+  },
+  {
+    title: "Market Access",
+    description: "Connecting SMEs to Kasi360, corporate supply chains, and online buyers.",
+  },
+  {
+    title: "Enterprise Growth",
+    description: "One year of structured support for 200 adopted SMEs and informal traders.",
+  },
+  {
+    title: "Networking",
+    description: "Meet policymakers, investors, innovators, and industry leaders.",
+  },
+];
+
+const sponsorshipCards = [
+  {
+    title: "Diamond",
+    investment: "R 1,200,000 – R 800,000 (€60,000 – €40,000)",
+    benefits:
+      "Keynote speaking slot, branding across event marketing, prime exhibition space, media coverage, and contribution to National Imperatives.",
+  },
+  {
+    title: "Gold",
+    investment: "R 650,000 – R 450,000 (€32,500 – €22,500)",
+    benefits:
+      "Panel discussion participation, co-branded workshops, logo placement on event materials and contribution to National Imperatives.",
+  },
+  {
+    title: "Silver",
+    investment: "R 350,000 – R 200,000 (€17,500 – €10,000)",
+    benefits:
+      "Exhibition space, branding on select event materials, social media features and contribution to National Imperatives.",
+  },
+  {
+    title: "Bronze",
+    investment: "R 150,000 – R 100,000 (€7,500 – €5,000)",
+    benefits:
+      "Logo on event banners, social media mentions, brand visibility on website and contribution to National Imperatives.",
+  },
+];
+
 const Home = () => {
   const navigate = useNavigate();
 
@@ -9,7 +73,7 @@ const Home = () => {
     navigate("/about");
   };
 
-   const goToContact = () => {
+  const goToContact = () => {
     navigate("/contact");
   };
 
@@ -18,12 +82,12 @@ const Home = () => {
       {/* HERO SECTION */}
       <section className="hero">
         <div className="hero-content">
-          <h1>Kasi Digital Connect 2026</h1>
+          <h1>Kasi Digital Connect</h1>
           <h3>Technology. Access. Growth.</h3>
           <p>
-            A groundbreaking summit empowering 500 township-based SMEs and informal
-            traders with digital tools, market access, skills development, and 
-            long-term business support.
+            A modern multi-service digital platform empowering local communities to transact conveniently,
+            confidently, and efficiently. Our goal is to transform township and local markets into strong,
+            accessible, and competitive digital ecosystems.
           </p>
           <button className="hero-btn" onClick={goToAbout}>
             Learn More
@@ -31,38 +95,29 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ABOUT SECTION */}
-      <section className="about-section">
-        <h2>What is Kasi Digital Connect?</h2>
-        <p>
-          Kasi Digital Connect 2026 is a first-of-its-kind initiative designed to 
-          accelerate digital transformation among township SMEs. With strategic 
-          support from economic development partners, the summit bridges the 
-          digital divide and connects entrepreneurs with technology, training, 
-          mentorship, and access to markets.
-        </p>
+      {/* ABOUT CARDS SECTION */}
+      <section className="about-cards-section">
+        <h2>Why KasiConnect?</h2>
+        <div className="about-cards-container">
+          {homeFeatures.map((feature, index) => (
+            <div key={index} className="about-card">
+              <h3>{feature.title}</h3>
+              <p>{feature.description}</p>
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* FEATURES SECTION */}
       <section className="features">
         <h2>Our Focus Areas</h2>
         <div className="feature-container">
-          <div className="feature-card">
-            <h3>Digital Skills</h3>
-            <p>Training on e-commerce, financial literacy, digital payments, and more.</p>
-          </div>
-          <div className="feature-card">
-            <h3>Market Access</h3>
-            <p>Connecting SMEs to Kasi360, corporate supply chains, and online buyers.</p>
-          </div>
-          <div className="feature-card">
-            <h3>Enterprise Growth</h3>
-            <p>One year of structured support for 200 adopted SMEs and informal traders.</p>
-          </div>
-          <div className="feature-card">
-            <h3>Networking</h3>
-            <p>Meet policymakers, investors, innovators, and industry leaders.</p>
-          </div>
+          {featureCards.map((card, index) => (
+            <div key={index} className="feature-card">
+              <h3>{card.title}</h3>
+              <p>{card.description}</p>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -74,37 +129,13 @@ const Home = () => {
         </p>
 
         <div className="sponsorship-cards">
-          <div className="sponsorship-card">
-            <h3>Diamond</h3>
-            <p className="investment">R 1,200,000 – R 800,000 (€60,000 – €40,000)</p>
-            <p className="benefits">
-              Keynote speaking slot, branding across event marketing, prime exhibition space, media coverage, and contribution to National Imperatives.
-            </p>
-          </div>
-
-          <div className="sponsorship-card">
-            <h3>Gold</h3>
-            <p className="investment">R 650,000 – R 450,000 (€32,500 – €22,500)</p>
-            <p className="benefits">
-              Panel discussion participation, co-branded workshops, logo placement on event materials and contribution to National Imperatives.
-            </p>
-          </div>
-
-          <div className="sponsorship-card">
-            <h3>Silver</h3>
-            <p className="investment">R 350,000 – R 200,000 (€17,500 – €10,000)</p>
-            <p className="benefits">
-              Exhibition space, branding on select event materials, social media features and contribution to National Imperatives.
-            </p>
-          </div>
-
-          <div className="sponsorship-card">
-            <h3>Bronze</h3>
-            <p className="investment">R 150,000 – R 100,000 (€7,500 – €5,000)</p>
-            <p className="benefits">
-              Logo on event banners, social media mentions, brand visibility on website and contribution to National Imperatives.
-            </p>
-          </div>
+          {sponsorshipCards.map((card, index) => (
+            <div key={index} className="sponsorship-card">
+              <h3>{card.title}</h3>
+              <p className="investment">{card.investment}</p>
+              <p className="benefits">{card.benefits}</p>
+            </div>
+          ))}
         </div>
       </section>
 

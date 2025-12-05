@@ -1,4 +1,3 @@
-/* Overall Container */
 .about-container {
   background-color: #050608;
   color: #fff;
@@ -8,116 +7,141 @@
 
 /* HERO SECTION */
 .about-hero {
-  padding: 4rem 0;
+  padding: 5rem 0 3rem;
   text-align: center;
-  background: radial-gradient(circle at top left, #0b1a33 0, #050608 70%);
+  background: linear-gradient(135deg, #0057a8 0%, #007a33 50%, #ffb81c 100%);
+  border-radius: 16px;
+  box-shadow: 0 15px 50px rgba(0,0,0,0.55);
 }
 
 .about-hero h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin-bottom: 1rem;
-  color: #58a6ff; /* light blue accent */
+  color: #fff;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
 }
 
 .about-hero p {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   max-width: 700px;
   margin: 0 auto;
-  line-height: 1.7;
-  color: #d0d4e0;
+  line-height: 1.8;
+  color: #e0e0e0;
 }
 
 /* VIDEO SECTION */
 .about-video {
-  margin: 3rem 0;
+  margin: 4rem 0;
   text-align: center;
 }
 
 .about-video h2 {
-  font-size: 1.8rem;
-  color: #ffd700; /* yellow accent */
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #ffd700;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
 }
 
 .about-video video {
-  border-radius: 12px;
+  border-radius: 16px;
   max-width: 100%;
-  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.55);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+  transition: transform 0.3s ease;
 }
 
-/* MISSION & VISION SECTIONS */
+.about-video video:hover {
+  transform: scale(1.02);
+}
+
+/* ABOUT SECTIONS */
 .about-section {
   margin: 3rem 0;
+  padding: 1.5rem;
+  background: #111318;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.5);
 }
 
 .about-section h2 {
-  font-size: 1.8rem;
-  color: #007a33; /* green accent */
+  font-size: 2rem;
+  color: #58a6ff;
   margin-bottom: 1rem;
 }
 
 .about-section p {
-  max-width: 720px;
-  line-height: 1.8;
   font-size: 1rem;
+  line-height: 1.8;
   color: #c8ccd8;
 }
 
-/* PILLARS / OBJECTIVES */
+/* CORE VALUES / PILLARS */
 .about-pillars {
   margin: 4rem 0;
-}
-
-.about-pillars h2 {
-  font-size: 1.9rem;
-  color: #58a6ff;
-  margin-bottom: 2rem;
   text-align: center;
 }
 
-/* Grid for pillar cards */
+.about-pillars h2 {
+  font-size: 2rem;
+  color: #ffb81c;
+  margin-bottom: 2rem;
+}
+
 .pillars-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 1.8rem;
 }
 
 .pillar-card {
-  background: #111318;
-  border-radius: 14px;
-  padding: 1.6rem 1.4rem;
+  background: #161921;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
   border: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.45);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.55);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   text-align: center;
 }
 
 .pillar-card h3 {
-  font-size: 1.15rem;
-  margin-bottom: 0.6rem;
-  color: #ffd700; /* yellow accent */
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: #ffd700;
 }
 
 .pillar-card p {
   font-size: 0.95rem;
-  color: #c8ccd8;
+  color: #d0d4e0;
   line-height: 1.7;
 }
 
 .pillar-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.55);
-  border-color: #0057a8; /* blue accent */
+  transform: translateY(-6px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+  border-color: #ffb81c;
 }
 
 /* RESPONSIVE */
 @media (max-width: 1024px) {
   .pillars-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
+  .pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-section {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pillars-grid {
+    grid-template-columns: 1fr;
+  }
+
   .about-hero h1 {
     font-size: 2rem;
   }
@@ -128,13 +152,12 @@
     font-size: 1.6rem;
   }
 
-  .pillars-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .about-hero p,
   .about-section p,
   .pillar-card p {
     font-size: 0.95rem;
+  }
+
+  .pillar-card h3 {
+    font-size: 1.05rem;
   }
 }
