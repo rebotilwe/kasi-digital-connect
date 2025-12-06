@@ -1,4 +1,4 @@
-import React, { useState } from "react"; 
+import React, { useState } from "react";
 import "./Contact.css";
 
 const Contact = () => {
@@ -9,15 +9,35 @@ const Contact = () => {
     message: ""
   });
 
+  const [status, setStatus] = useState(""); // for success/error messages
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
-    alert("Thank you! Your message has been submitted.");
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    setStatus("sending");
+
+    try {
+      const response = await fetch("https://formspree.io/f/mjknolla", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus("success");
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      setStatus("error");
+    }
   };
 
   return (
@@ -30,7 +50,7 @@ const Contact = () => {
         </p>
       </section>
 
-      {/* Form + Info Section */}
+      {/* Form Section */}
       <section className="contact-form-section">
         <form onSubmit={handleSubmit} className="contact-form">
           <input
@@ -63,9 +83,21 @@ const Contact = () => {
             onChange={handleChange}
             required
           ></textarea>
-          <button type="submit">Send Message</button>
+
+          <button type="submit">
+            {status === "sending" ? "Sending..." : "Send Message"}
+          </button>
+
+          {/* Success / Error Messages */}
+          {status === "success" && (
+            <p className="success-msg">Message sent successfully ✔</p>
+          )}
+          {status === "error" && (
+            <p className="error-msg">Something went wrong. Please try again.</p>
+          )}
         </form>
 
+        {/* Contact Info */}
         <div className="contact-info">
           <h3>Or Reach Us Directly:</h3>
           <p>Address: 48 Fountains, 28 Graham Road, Lombardy Estate, Pretoria, 0081</p>
@@ -73,7 +105,7 @@ const Contact = () => {
           <p>Phone: +27 12 345 6789</p>
           <p>Follow us on Social Media: Instagram | LinkedIn | Twitter</p>
 
-          {/* Map Embed */}
+          {/* Map */}
           <div className="contact-map">
             <iframe
               title="KasiConnect Location"
