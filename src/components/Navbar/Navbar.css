@@ -1,4 +1,6 @@
-/* Overall page */
+/* ===========================
+   GLOBAL NAVBAR STYLING
+=========================== */
 body {
   margin: 0;
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -6,13 +8,15 @@ body {
   color: #fff;
 }
 
-/* NAVBAR */
+/* ===========================
+   NAVBAR CONTAINER
+=========================== */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 3rem;
-  background: linear-gradient(90deg, #ffb81c, #007a33, #0057a8); /* subtle flag colors */
+  padding: 0.6rem 3rem;
+  background: linear-gradient(90deg, #ffb81c, #007a33, #0057a8);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   position: sticky;
@@ -21,22 +25,41 @@ body {
   backdrop-filter: blur(6px);
 }
 
+/* ===========================
+   LOGO STYLING
+=========================== */
 .logo {
   display: flex;
   align-items: center;
+  padding: 0.3rem 0.8rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
 }
 
 .nav-logo {
-  height: 70px;
+  height: 90px;
   width: auto;
-  transition: transform 0.3s ease;
+  border-radius: 12px;
+  object-fit: contain;
+  transition: transform 0.35s ease;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.35));
 }
 
-.nav-logo:hover {
-  transform: scale(1.05);
+.logo:hover .nav-logo {
+  transform: scale(1.06);
 }
 
-/* NAV LINKS */
+/* ===========================
+   NAV LINKS (DESKTOP)
+=========================== */
 .nav-links {
   display: flex;
   list-style: none;
@@ -63,12 +86,12 @@ body {
   bottom: -0.35rem;
   width: 0;
   height: 2px;
-  background: #ffd700; /* yellow accent */
+  background: #ffd700;
   transition: width 0.25s ease;
 }
 
 .nav-links a:hover {
-  color: #ffeb3b; /* subtle yellow highlight */
+  color: #ffeb3b;
   transform: translateY(-1px);
 }
 
@@ -76,10 +99,12 @@ body {
   width: 100%;
 }
 
-/* CONTACT BUTTON */
+/* ===========================
+   CONTACT BUTTON (DESKTOP)
+=========================== */
 .btn-contact {
   padding: 0.5rem 1.2rem;
-  background: #0057a8; /* blue from flag */
+  background: #0057a8;
   color: #fff !important;
   border-radius: 999px;
   font-weight: 600;
@@ -91,19 +116,21 @@ body {
 }
 
 .btn-contact:hover {
-  background: #ffb81c; /* yellow accent on hover */
+  background: #ffb81c;
   transform: translateY(-1px);
   color: #050608;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.55);
 }
 
-/* MOBILE CONTACT LINK */
+/* ===========================
+   MOBILE CONTACT LINK
+=========================== */
 .mobile-contact {
   display: none;
   color: #fff;
   font-weight: 600;
-  font-size: 1rem;
-  padding: 0.8rem 0;
+  font-size: 1.2rem;
+  padding: 1rem 0;
   transition: color 0.2s ease;
 }
 
@@ -111,7 +138,9 @@ body {
   color: #ffeb3b;
 }
 
-/* HAMBURGER MENU */
+/* ===========================
+   HAMBURGER MENU
+=========================== */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -127,50 +156,52 @@ body {
   transition: all 0.3s ease;
 }
 
-/* MEDIA QUERIES */
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
 
-/* Tablets and small laptops */
+/* Tablets */
 @media (max-width: 1024px) {
   .nav-links {
     gap: 1.5rem;
   }
   .nav-logo {
-    height: 60px;
+    height: 65px;
   }
 }
 
-/* MOBILE MENU OVERLAY */
+/* ===========================
+   MOBILE OVERLAY MENU
+=========================== */
 @media (max-width: 768px) {
   .nav-links {
-    position: fixed; /* full screen overlay */
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    height: 100vh; /* full height */
-    background: rgba(5, 6, 8, 0.98); /* semi-transparent dark */
+    height: 100vh;
+    background: rgba(5, 6, 8, 0.98);
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* center links vertically */
-    overflow-y: auto;
-    max-height: none;
+    justify-content: center;
     padding: 0;
-    transform: translateX(-100%); /* hide off-screen initially */
+    transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
-    z-index: 2000; /* on top of everything */
+    z-index: 2000;
   }
 
   .nav-links.active {
-    transform: translateX(0); /* slide in when active */
+    transform: translateX(0);
   }
 
   .nav-links a,
   .mobile-contact {
-    padding: 1rem 0;
     font-size: 1.2rem;
+    padding: 1rem 0;
   }
 
   .btn-contact {
-    display: none; /* hide desktop button */
+    display: none;
   }
 
   .mobile-contact {
@@ -180,17 +211,15 @@ body {
   .hamburger {
     display: flex;
   }
+
+  .nav-logo {
+    height: 55px;
+  }
 }
 
-
-/* Extra small devices (phones) */
+/* Small phones */
 @media (max-width: 480px) {
   .nav-logo {
-    height: 50px;
-  }
-
-  .nav-links a,
-  .mobile-contact {
-    font-size: 0.95rem;
+    height: 48px;
   }
 }
