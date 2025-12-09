@@ -1,9 +1,12 @@
+/* ===========================
+   FOOTER
+=========================== */
 .footer {
-  background: #111318;
-  color: #fff;
+  background: #1a365d; /* matches navbar */
+  color: #ffffff;
   font-family: "Inter", sans-serif;
-  padding: 1.5rem 6vw 1rem; /* reduced padding for a smaller height */
-  border-top: 2px solid #0057a8;
+  padding: 1.2rem 6vw; /* reduced vertical padding */
+  border-top: none; 
 }
 
 .footer-container {
@@ -19,9 +22,9 @@
 }
 
 .footer-section h3 {
-  font-size: 1rem; /* smaller heading */
+  font-size: 0.95rem; /* slightly smaller heading */
   color: #ffd700;
-  margin-bottom: 0.6rem; /* less space */
+  margin-bottom: 0.4rem; /* less space */
   letter-spacing: 0.4px;
 }
 
@@ -32,59 +35,59 @@
 }
 
 .footer-section ul li {
-  margin-bottom: 0.4rem; /* reduced space between links */
+  margin-bottom: 0.3rem; /* tighter spacing */
 }
 
 .footer-section ul li a {
-  color: #c8ccd8;
+  color: #cce0ff;
   text-decoration: none;
-  font-size: 0.85rem; /* slightly smaller text */
+  font-size: 0.85rem; /* smaller text for compact look */
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .footer-section ul li a:hover {
-  color: #58a6ff;
+  color: #ffd700;
   transform: translateX(2px);
 }
 
 .footer-section p,
 .footer-section a {
-  color: #c8ccd8;
+  color: #cce0ff;
   text-decoration: none;
   line-height: 1.4; /* tighter line height */
   font-size: 0.85rem;
 }
 
 .footer-section a:hover {
-  color: #007a33;
+  color: #ffd700;
   text-decoration: underline;
 }
 
 .footer-bottom {
-  margin-top: 1rem; /* reduced margin */
+  margin-top: 1rem;
   text-align: center;
   font-size: 0.75rem; /* smaller font */
-  color: #888;
+  color: #cce0ff;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 0.6rem; /* smaller padding */
+  padding-top: 0.5rem; /* reduced padding */
   letter-spacing: 0.4px;
 }
 
 /* Social Icons */
 .social-icons {
   display: flex;
-  gap: 0.8rem; /* smaller gap */
+  gap: 0.8rem; /* slightly smaller gap */
   margin-top: 0.3rem;
 }
 
 .social-icons a {
-  color: #c8ccd8;
-  font-size: 1.1rem; /* smaller icons */
+  color: #cce0ff;
+  font-size: 1rem; /* smaller icons */
   transition: all 0.3s ease;
 }
 
 .social-icons a:hover {
-  color: #00aaff;
+  color: #ffd700;
   transform: translateY(-2px);
 }
 
@@ -102,7 +105,7 @@
 
 @media (max-width: 480px) {
   .footer-section h3 {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 
   .footer-bottom {
