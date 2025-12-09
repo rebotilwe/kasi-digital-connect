@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import "./Footer.css";
 
 const Footer = () => {
@@ -24,7 +25,7 @@ const Footer = () => {
         {/* Contact Info */}
         <div className="footer-section">
           <h3>Contact Info</h3>
-          <p>Address: 48 Fountains, 28 Graham Road, Lombardy Estate, Pretoria, 0081</p>
+          <p>48 Fountains, 28 Graham Road, Lombardy Estate, Pretoria, 0081</p>
           <p>Email: <a href="mailto:info@kasiconnect.co.za">info@kasiconnect.co.za</a></p>
           <p>Phone: +27 12 345 6789</p>
         </div>
@@ -32,11 +33,17 @@ const Footer = () => {
         {/* Social Media */}
         <div className="footer-section">
           <h3>Follow Us</h3>
-          <p>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a> |{" "}
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a> |{" "}
-            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
-          </p>
+          <div className="social-icons">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+              <FaInstagram />
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin />
+            </a>
+            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+              <FaTwitter />
+            </a>
+          </div>
         </div>
 
       </div>
