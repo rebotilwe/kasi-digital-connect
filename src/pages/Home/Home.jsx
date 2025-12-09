@@ -3,14 +3,14 @@ import "./Home.css";
 import { useNavigate } from "react-router-dom";
 
 // Images
-import hero from "../../assets/hero.jpg";
+
 import web from "../../assets/web.jpeg";
 import marketing from "../../assets/marketing.jpeg";
 import brand from "../../assets/brand.jpeg";
 import team3 from "../../assets/team3.jpg";
-import team2 from "../../assets/team2.jpeg";
+
 import CTA from "../../assets/CTA.jpeg";
-import team4 from "../../assets/team4.webp";
+
 import team5 from "../../assets/team5.avif";
 
 const Home = () => {
