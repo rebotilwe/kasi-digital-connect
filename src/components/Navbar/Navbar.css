@@ -16,7 +16,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0.8rem 3rem;
-  background: #1a365d; /* dark blue for contrast */
+  background: #1a365d;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   position: sticky;
   top: 0;
@@ -39,7 +39,7 @@ body {
 }
 
 .logo:hover .nav-logo {
-  transform: scale(1.02);
+  transform: scale(1.05);
 }
 
 /* ===========================
@@ -48,7 +48,7 @@ body {
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 2.2rem;
+  gap: 2rem;
   align-items: center;
   margin: 0;
   padding: 0;
@@ -62,17 +62,16 @@ body {
   letter-spacing: 0.02em;
   position: relative;
   transition: color 0.2s ease;
-  text-transform: none;
 }
 
 .nav-links a::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -0.4rem;
+  bottom: -0.3rem;
   width: 0;
   height: 2px;
-  background: #004aad; /* accent color */
+  background: #004aad;
   transition: width 0.25s ease;
 }
 
@@ -89,7 +88,7 @@ body {
    CONTACT BUTTON (DESKTOP)
 =========================== */
 .btn-contact {
-  padding: 0.6rem 1.6rem;
+  padding: 0.55rem 1.5rem;
   background: #004aad;
   color: #fff !important;
   border-radius: 50px;
@@ -113,8 +112,9 @@ body {
   display: none;
   color: #ffffff;
   font-weight: 600;
-  font-size: 1.1rem;
-  padding: 1rem 0;
+  font-size: 1.05rem;
+  padding: 0.8rem 0;
+  transition: color 0.2s ease;
 }
 
 .mobile-contact:hover {
@@ -128,12 +128,12 @@ body {
   display: none;
   flex-direction: column;
   cursor: pointer;
-  gap: 4px;
-  z-index: 2100; /* above mobile nav */
+  gap: 5px;
+  z-index: 2100;
 }
 
 .hamburger div {
-  width: 24px;
+  width: 26px;
   height: 3px;
   background-color: #ffffff;
   border-radius: 2px;
@@ -141,15 +141,15 @@ body {
 }
 
 /* Hamburger animation when active */
-.hamburger.active div:nth-child(1) {
+.nav-links.active + .hamburger div:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
 
-.hamburger.active div:nth-child(2) {
+.nav-links.active + .hamburger div:nth-child(2) {
   opacity: 0;
 }
 
-.hamburger.active div:nth-child(3) {
+.nav-links.active + .hamburger div:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
@@ -158,10 +158,10 @@ body {
 =========================== */
 @media (max-width: 1024px) {
   .nav-links {
-    gap: 1.8rem;
+    gap: 1.5rem;
   }
   .nav-logo {
-    height: 60px;
+    height: 65px;
   }
 }
 
@@ -180,7 +180,6 @@ body {
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
     z-index: 2000;
-    box-shadow: -4px 0 20px rgba(0,0,0,0.1);
   }
 
   .nav-links.active {
@@ -189,8 +188,14 @@ body {
 
   .nav-links a,
   .mobile-contact {
-    font-size: 1.15rem;
-    padding: 1.2rem 0;
+    font-size: 1.1rem;
+    padding: 0.7rem 0; /* reduced spacing */
+    transition: color 0.2s ease, transform 0.2s ease;
+  }
+
+  .nav-links a:hover,
+  .mobile-contact:hover {
+    transform: translateX(4px);
   }
 
   .btn-contact {
@@ -217,5 +222,11 @@ body {
 @media (max-width: 480px) {
   .nav-logo {
     height: 50px;
+  }
+
+  .nav-links a,
+  .mobile-contact {
+    font-size: 1rem;
+    padding: 0.6rem 0; /* tighter spacing for small screens */
   }
 }
