@@ -29,7 +29,7 @@ const Home = () => {
   <div className="hero-content">
     <h1>Kasi Digital Connect</h1>
     <p>
-      A corporate digital platform empowering communities through technology,
+      A Corporate digital platform empowering communities through technology,
       innovation, and accessible digital services.
     </p>
     <button className="primary-btn" onClick={() => navigate("/about")}>
