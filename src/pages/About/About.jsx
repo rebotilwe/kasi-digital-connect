@@ -13,7 +13,7 @@ const About = () => {
             KasiConnect is a modern multi-service digital platform created to empower local communities
             by bridging the gap between traditional business and the digital economy.
           </p>
-          <button className="about-hero-btn">Learn More</button>
+          {/* <button className="about-hero-btn">Learn More</button> */}
         </div>
       </section>
 
