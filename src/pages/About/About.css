@@ -1,80 +1,97 @@
 .about-container {
-  background-color: #050608;
-  color: #fff;
+  background-color: #ffffff;
+  color: #1a1a1a;
   font-family: "Inter", sans-serif;
   padding: 0 8vw 4rem;
 }
 
-/* HERO SECTION */
-.about-hero {
-  padding: 5rem 0 3rem;
-  text-align: center;
-  background: linear-gradient(135deg, #0057a8 0%, #007a33 50%, #ffb81c 100%);
-  border-radius: 16px;
-  box-shadow: 0 15px 50px rgba(0,0,0,0.55);
+/* ================= HERO (NO IMAGE VERSION) ================= */
+.about-hero.no-image {
+  background: linear-gradient(135deg, #f3f7fc, #eaf0f7);
+  border-radius: 18px;
+  padding: 6rem 8vw;
+  text-align: left;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.05);
 }
 
-.about-hero h1 {
+.about-hero-content h1 {
   font-size: 2.8rem;
+  font-weight: 700;
+  color: #1a365d;
   margin-bottom: 1rem;
+}
+
+.about-hero-content p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #3b3b3b;
+  margin-bottom: 2rem;
+}
+
+.about-hero-btn {
+  padding: 0.9rem 2.2rem;
+  background: #004aad;
   color: #fff;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+  border-radius: 50px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
-.about-hero p {
-  font-size: 1.1rem;
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.8;
-  color: #e0e0e0;
+.about-hero-btn:hover {
+  background: #00367f;
+  transform: translateY(-2px);
 }
 
-/* VIDEO SECTION */
+/* ================= VIDEO ================= */
 .about-video {
-  margin: 4rem 0;
+  margin: 4rem auto;
   text-align: center;
+  max-width: 900px;   /* ⬅ keeps it nicely sized on desktop */
+  width: 100%;
 }
 
 .about-video h2 {
   font-size: 2rem;
-  color: #ffd700;
+  color: #004aad;
   margin-bottom: 1.5rem;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
 }
 
 .about-video video {
-  border-radius: 16px;
-  max-width: 100%;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
-  transition: transform 0.3s ease;
+  border-radius: 14px;
+  width: 100%;
+  max-height: 500px;   /* ⬅ prevents it from being too tall */
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
-.about-video video:hover {
-  transform: scale(1.02);
-}
 
-/* ABOUT SECTIONS */
+/* ================= SECTIONS ================= */
 .about-section {
   margin: 3rem 0;
-  padding: 1.5rem;
-  background: #111318;
-  border-radius: 16px;
-  box-shadow: 0 12px 28px rgba(0,0,0,0.5);
+  padding: 2.2rem;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #e6eaf0;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
 }
 
 .about-section h2 {
   font-size: 2rem;
-  color: #58a6ff;
+  color: #1a365d;
   margin-bottom: 1rem;
 }
 
 .about-section p {
   font-size: 1rem;
   line-height: 1.8;
-  color: #c8ccd8;
+  color: #333;
 }
 
-/* CORE VALUES / PILLARS */
+/* ================= PILLARS ================= */
 .about-pillars {
   margin: 4rem 0;
   text-align: center;
@@ -82,82 +99,46 @@
 
 .about-pillars h2 {
   font-size: 2rem;
-  color: #ffb81c;
+  color: #1a365d;
   margin-bottom: 2rem;
 }
 
 .pillars-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 1.8rem;
+  gap: 1.7rem;
 }
 
 .pillar-card {
-  background: #161921;
+  background: #f7f9fc;
   border-radius: 16px;
-  padding: 2rem 1.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.55);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-  text-align: center;
+  padding: 1.8rem;
+  border: 1px solid #d6ddea;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .pillar-card h3 {
   font-size: 1.2rem;
-  margin-bottom: 0.8rem;
-  color: #ffd700;
-}
-
-.pillar-card p {
-  font-size: 0.95rem;
-  color: #d0d4e0;
-  line-height: 1.7;
+  margin-bottom: 0.6rem;
+  color: #004aad;
 }
 
 .pillar-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 25px 50px rgba(0,0,0,0.6);
-  border-color: #ffb81c;
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
 }
 
-/* RESPONSIVE */
+/* ================= RESPONSIVE ================= */
 @media (max-width: 1024px) {
-  .pillars-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  .pillars-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (max-width: 768px) {
-  .pillars-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .about-section {
-    padding: 1rem;
-  }
+  .pillars-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 480px) {
-  .pillars-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .about-hero h1 {
-    font-size: 2rem;
-  }
-
-  .about-video h2,
-  .about-section h2,
-  .about-pillars h2 {
-    font-size: 1.6rem;
-  }
-
-  .about-section p,
-  .pillar-card p {
-    font-size: 0.95rem;
-  }
-
-  .pillar-card h3 {
-    font-size: 1.05rem;
-  }
+  .pillars-grid { grid-template-columns: 1fr; }
+  .about-hero-content h1 { font-size: 2.2rem; }
 }

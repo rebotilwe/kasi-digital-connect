@@ -9,7 +9,7 @@ const Contact = () => {
     message: ""
   });
 
-  const [status, setStatus] = useState(""); // for success/error messages
+  const [status, setStatus] = useState("");
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -42,43 +42,50 @@ const Contact = () => {
 
   return (
     <div className="contact-container">
-      {/* Hero Section */}
+      
+      {/* HERO */}
       <section className="contact-hero">
         <h1>Contact Us</h1>
         <p>
-          Have questions or want to get involved? Fill out the form below, and we’ll get back to you as soon as possible.
+          Have a question, need assistance, or want to collaborate with us? 
+          Send us a message and our team will get back to you shortly.
         </p>
       </section>
 
-      {/* Form Section */}
+      {/* FORM + INFO SECTION */}
       <section className="contact-form-section">
+        
+        {/* FORM */}
         <form onSubmit={handleSubmit} className="contact-form">
           <input
             type="text"
             name="name"
-            placeholder="Your Name"
+            placeholder="Full Name"
             value={formData.name}
             onChange={handleChange}
             required
           />
+
           <input
             type="email"
             name="email"
-            placeholder="Your Email"
+            placeholder="Email Address"
             value={formData.email}
             onChange={handleChange}
             required
           />
+
           <input
             type="text"
             name="subject"
-            placeholder="Subject"
+            placeholder="Subject (Optional)"
             value={formData.subject}
             onChange={handleChange}
           />
+
           <textarea
             name="message"
-            placeholder="Your Message"
+            placeholder="Write your message here..."
             value={formData.message}
             onChange={handleChange}
             required
@@ -90,22 +97,34 @@ const Contact = () => {
 
           {/* Success / Error Messages */}
           {status === "success" && (
-            <p className="success-msg">Message sent successfully ✔</p>
+            <p className="success-msg">✔ Message sent successfully</p>
           )}
           {status === "error" && (
-            <p className="error-msg">Something went wrong. Please try again.</p>
+            <p className="error-msg">Something went wrong. Try again.</p>
           )}
         </form>
 
-        {/* Contact Info */}
+        {/* CONTACT INFORMATION */}
         <div className="contact-info">
-          <h3>Or Reach Us Directly:</h3>
-          <p>Address: 48 Fountains, 28 Graham Road, Lombardy Estate, Pretoria, 0081</p>
-          <p>Email: <a href="mailto:info@kasiconnect.co.za">info@kasiconnect.co.za</a></p>
-          <p>Phone: +27 12 345 6789</p>
-          <p>Follow us on Social Media: Instagram | LinkedIn | Twitter</p>
+          <h3>Get In Touch</h3>
 
-          {/* Map */}
+          <p><strong>Address:</strong><br />
+            48 Fountains, 28 Graham Road, Lombardy Estate, Pretoria, 0081
+          </p>
+
+          <p><strong>Email:</strong><br />
+            <a href="mailto:info@kasiconnect.co.za">info@kasiconnect.co.za</a>
+          </p>
+
+          <p><strong>Phone:</strong><br />
+            +27 12 345 6789
+          </p>
+
+          <p><strong>Follow Us:</strong><br />
+            Instagram | LinkedIn | Twitter
+          </p>
+
+          {/* MAP */}
           <div className="contact-map">
             <iframe
               title="KasiConnect Location"
@@ -118,6 +137,7 @@ const Contact = () => {
             ></iframe>
           </div>
         </div>
+
       </section>
     </div>
   );

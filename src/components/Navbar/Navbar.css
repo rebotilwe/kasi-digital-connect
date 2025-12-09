@@ -16,8 +16,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0.8rem 3rem;
-  background: #ffffff;
-  border-bottom: 1px solid #e0e6ed;
+  background: #1a365d; /* dark blue for contrast */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   position: sticky;
   top: 0;
@@ -30,20 +29,11 @@ body {
 .logo {
   display: flex;
   align-items: center;
-  padding: 0.4rem 0.8rem;
-  border-radius: 8px;
-  background: #f8f9fa;
-  transition: box-shadow 0.2s ease;
-}
-
-.logo:hover {
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .nav-logo {
-  height: 70px;
+  height: 85px;
   width: auto;
-  border-radius: 8px;
   object-fit: contain;
   transition: transform 0.2s ease;
 }
@@ -66,7 +56,7 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: #2c3e50;
+  color: #ffffff;
   font-weight: 500;
   font-size: 0.95rem;
   letter-spacing: 0.02em;
@@ -82,15 +72,16 @@ body {
   bottom: -0.4rem;
   width: 0;
   height: 2px;
-  background: #1a365d;
+  background: #004aad; /* accent color */
   transition: width 0.25s ease;
 }
 
 .nav-links a:hover {
-  color: #1a365d;
+  color: #cce0ff;
 }
 
-.nav-links a:hover::after {
+.nav-links a:hover::after,
+.nav-links a.active::after {
   width: 100%;
 }
 
@@ -99,21 +90,20 @@ body {
 =========================== */
 .btn-contact {
   padding: 0.6rem 1.6rem;
-  background: #1a365d;
+  background: #004aad;
   color: #fff !important;
-  border-radius: 6px;
+  border-radius: 50px;
   font-weight: 600;
   font-size: 0.9rem;
-  text-transform: none;
   border: none;
-  box-shadow: 0 2px 8px rgba(26, 54, 93, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease;
 }
 
 .btn-contact:hover {
-  background: #2c5282;
+  background: #00367f;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(26, 54, 93, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* ===========================
@@ -121,14 +111,14 @@ body {
 =========================== */
 .mobile-contact {
   display: none;
-  color: #1a365d;
+  color: #ffffff;
   font-weight: 600;
   font-size: 1.1rem;
   padding: 1rem 0;
 }
 
 .mobile-contact:hover {
-  color: #2c5282;
+  color: #cce0ff;
 }
 
 /* ===========================
@@ -139,14 +129,28 @@ body {
   flex-direction: column;
   cursor: pointer;
   gap: 4px;
+  z-index: 2100; /* above mobile nav */
 }
 
 .hamburger div {
   width: 24px;
   height: 3px;
-  background-color: #2c3e50;
+  background-color: #ffffff;
   border-radius: 2px;
   transition: all 0.3s ease;
+}
+
+/* Hamburger animation when active */
+.hamburger.active div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active div:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
 /* ===========================
@@ -168,7 +172,7 @@ body {
     left: 0;
     right: 0;
     height: 100vh;
-    background: #ffffff;
+    background: #1a365d;
     flex-direction: column;
     align-items: center;
     justify-content: center;

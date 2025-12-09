@@ -30,18 +30,12 @@ const Services = () => {
   const contentRefs = useRef([]);
 
   useEffect(() => {
-    const newHeights = contentRefs.current.map(
-      (ref) => ref?.scrollHeight || 0
-    );
+    const newHeights = contentRefs.current.map((ref) => ref?.scrollHeight || 0);
     setHeights(newHeights);
   }, []);
 
   const toggleExpand = (index) => {
-    if (expandedIndex === index) {
-      setExpandedIndex(null);
-    } else {
-      setExpandedIndex(index);
-    }
+    setExpandedIndex(expandedIndex === index ? null : index);
   };
 
   return (
@@ -61,27 +55,19 @@ const Services = () => {
           {services.map((service, index) => (
             <li
               key={index}
-              className={`service-item ${
-                expandedIndex === index ? "expanded" : ""
-              }`}
+              className={`service-item ${expandedIndex === index ? "expanded" : ""}`}
             >
               <div className="service-header">
                 <div className="service-icon">{service.icon}</div>
                 <h3>{service.title}</h3>
-                <button
-                  className="learn-more-btn"
-                  onClick={() => toggleExpand(index)}
-                >
+                <button className="learn-more-btn" onClick={() => toggleExpand(index)}>
                   {expandedIndex === index ? "Show Less" : "Learn More"}
                 </button>
               </div>
               <div
                 className="service-details"
                 ref={(el) => (contentRefs.current[index] = el)}
-                style={{
-                  maxHeight:
-                    expandedIndex === index ? `${heights[index]}px` : "0px",
-                }}
+                style={{ maxHeight: expandedIndex === index ? `${heights[index]}px` : "0px" }}
               >
                 <p>{service.description}</p>
               </div>

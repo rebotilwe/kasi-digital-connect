@@ -1,8 +1,7 @@
-import React from 'react'
-import './OurOffers.css'
+import React from 'react';
+import './OurOffers.css';
 
 const OurOffers = () => {
-
   return (
     <div className="offer-container">
 
@@ -10,9 +9,9 @@ const OurOffers = () => {
       <section className="offer-hero">
         <h1>What We Offer</h1>
         <p>
-          Kasi Digital Connect provides a platform that empowers township entrepreneurs,
-          connects SMEs with opportunities, and accelerates digital transformation through
-          training, technology, and partnerships.
+          Kasi Digital Connect empowers township entrepreneurs by connecting SMEs
+          with opportunities, providing training, technology solutions, and partnerships
+          that support digital transformation.
         </p>
       </section>
 
@@ -21,57 +20,37 @@ const OurOffers = () => {
 
         <div className="offer-card">
           <h3>Digital Skills & Training</h3>
-          <p>
-            Workshops and masterclasses focused on digital literacy, online business tools,
-            and technology adoption for SMEs and informal traders.
-          </p>
+          <p>Workshops and masterclasses focused on digital literacy and online tools.</p>
         </div>
 
         <div className="offer-card">
           <h3>Business Support & Formalisation</h3>
-          <p>
-            Assistance with compliance, business registration, branding, and tools that help
-            township businesses operate professionally.
-          </p>
+          <p>Registration, compliance, branding, and essential business tools.</p>
         </div>
 
         <div className="offer-card">
           <h3>Technology Solutions</h3>
-          <p>
-            Access to digital tools such as POS systems, e-commerce platforms, mobile apps,
-            and digital marketing solutions.
-          </p>
+          <p>POS systems, ecommerce platforms, and digital marketing support.</p>
         </div>
 
         <div className="offer-card">
           <h3>Market Access & Networking</h3>
-          <p>
-            Opportunities to connect with investors, corporate buyers, suppliers, and
-            support organisations.
-          </p>
+          <p>Connect with investors, buyers, corporates, and supply chains.</p>
         </div>
 
         <div className="offer-card">
           <h3>Exhibitions & Showcases</h3>
-          <p>
-            A platform for SMEs, youth innovators, and tech creators to exhibit their work
-            and gain exposure.
-          </p>
+          <p>Platforms for innovators to showcase their work and gain exposure.</p>
         </div>
 
         <div className="offer-card">
           <h3>Funding & Investment Linkages</h3>
-          <p>
-            Connecting businesses to funders, sponsors, and financial institutions to boost
-            township entrepreneurship.
-          </p>
+          <p>Connecting entrepreneurs to funders and financial institutions.</p>
         </div>
 
         <div className="offer-card">
           <h3>Community Empowerment Initiatives</h3>
-          <p>
-            Programs that uplift youth, women, and entrepreneurs by promoting digital inclusion.
-          </p>
+          <p>Programs promoting digital inclusion for youth, women, and entrepreneurs.</p>
         </div>
 
       </section>
@@ -80,8 +59,8 @@ const OurOffers = () => {
       <section className="offer-impact">
         <h2>Empowering Township Businesses</h2>
         <p>
-          KDC aims to build a future where township entrepreneurs have the digital tools,
-          confidence, and opportunities to compete and thrive in the modern economy.
+          KDC equips township entrepreneurs with the digital tools, confidence, and opportunities
+          they need to thrive and scale in today’s digital-first economy.
         </p>
       </section>
 
@@ -89,5 +68,4 @@ const OurOffers = () => {
   );
 };
 
-
-export default OurOffers
+export default OurOffers;

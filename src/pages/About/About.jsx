@@ -6,20 +6,21 @@ const About = () => {
     <div className="about-container">
 
       {/* Hero Section */}
-      <section className="about-hero">
-        <h1>About Kasi Digital Connect</h1>
-        <p>
-          KasiConnect is a modern multi-service digital platform created to empower local communities
-          by bridging the gap between traditional business and the digital economy. We provide
-          innovative online solutions that connect buyers, sellers, service providers, and renters—
-          enabling them to transact conveniently, confidently, and efficiently.
-        </p>
+      <section className="about-hero no-image">
+        <div className="about-hero-content">
+          <h1>About Kasi Digital Connect</h1>
+          <p>
+            KasiConnect is a modern multi-service digital platform created to empower local communities
+            by bridging the gap between traditional business and the digital economy.
+          </p>
+          <button className="about-hero-btn">Learn More</button>
+        </div>
       </section>
 
       {/* Video Section */}
       <section className="about-video">
         <h2>Watch Our Intro Video</h2>
-        <video controls width="100%" poster="/images/video-poster.jpg">
+        <video controls width="100%">
           <source src="/videos/kasi.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -71,7 +72,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team / Leadership */}
+      {/* Team */}
       <section className="about-section">
         <h2>Team / Leadership</h2>
         <p>
@@ -80,7 +81,7 @@ const About = () => {
         </p>
       </section>
 
-      {/* Company History */}
+      {/* History */}
       <section className="about-section">
         <h2>Company History</h2>
         <p>
@@ -89,6 +90,7 @@ const About = () => {
           bookings, and rentals to support local economic development.
         </p>
       </section>
+
     </div>
   );
 };

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import logo from "../../assets/logo.png";
+// import logo from "../../assets/logo.png";
+import logo2 from "../../assets/logo2.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +15,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="logo">
         <Link to="/" onClick={handleLinkClick}>
-          <img src={logo} alt="KDC Logo" className="nav-logo" />
+          <img src={logo2} alt="KDC Logo" className="nav-logo" />
         </Link>
       </div>
 

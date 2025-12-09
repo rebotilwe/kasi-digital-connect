@@ -1,8 +1,8 @@
-import React from 'react'
-import './RoleOfSMEs.css'
+import React from 'react';
+import './RoleOfSMEs.css';
 
 const RoleOfSMEs = () => {
- return (
+  return (
     <div className="smes-container">
 
       {/* Hero Section */}
@@ -11,9 +11,8 @@ const RoleOfSMEs = () => {
         <p>
           SMEs and informal traders are the backbone of township economies,
           creating jobs, stimulating local spending, and driving community
-          development. Kasi Digital Connect recognises their essential role and
-          aims to empower them through digital tools, training, and partnership
-          opportunities.
+          development. Kasi Digital Connect empowers them through digital tools,
+          training, and partnership opportunities.
         </p>
       </section>
 
@@ -21,10 +20,10 @@ const RoleOfSMEs = () => {
       <section className="smes-section">
         <h2>Why SMEs & Informal Traders Matter</h2>
         <ul>
-          <li><strong>Job Creation & Local Economic Growth:</strong> Small and informal businesses generate the majority of employment in townships.</li>
-          <li><strong>Community Development:</strong> SMEs reinvest locally, strengthening the township ecosystem.</li>
-          <li><strong>Innovation & Adaptability:</strong> Township entrepreneurs are highly resourceful and quick to adopt new models.</li>
-          <li><strong>Market Accessibility:</strong> They connect essential goods and services directly to local communities.</li>
+          <li><strong>Job Creation:</strong> They generate the majority of employment in townships.</li>
+          <li><strong>Local Economic Growth:</strong> Their income circulates directly inside communities.</li>
+          <li><strong>Innovation:</strong> Township entrepreneurs are adaptable and resourceful.</li>
+          <li><strong>Market Accessibility:</strong> They supply essential goods and services where needed most.</li>
         </ul>
       </section>
 
@@ -32,33 +31,32 @@ const RoleOfSMEs = () => {
       <section className="smes-section">
         <h2>Challenges They Face</h2>
         <ul>
-          <li>Limited access to capital and funding</li>
-          <li>Low digital literacy and technology adoption</li>
-          <li>Poor visibility and limited access to broader markets</li>
-          <li>Infrastructure limitations affecting operations</li>
-          <li>Lack of formal support systems</li>
+          <li>Limited access to funding and capital</li>
+          <li>Low digital literacy levels</li>
+          <li>Lack of visibility beyond local markets</li>
+          <li>Infrastructure and operational constraints</li>
+          <li>Minimal formal support systems</li>
         </ul>
       </section>
 
-      {/* How KDC Supports Them */}
+      {/* Support */}
       <section className="smes-section">
-        <h2>How KDC Supports SMEs & Informal Traders</h2>
+        <h2>How KDC Supports Them</h2>
         <ul>
-          <li>Digital training & skills development</li>
+          <li>Digital skills training & workshops</li>
           <li>Tools for business formalisation</li>
           <li>Market access through networking & partnerships</li>
-          <li>Technology adoption support (POS, ecommerce, branding)</li>
-          <li>Opportunities to connect with corporates, investors, and suppliers</li>
+          <li>Technology adoption (branding, ecommerce, POS)</li>
+          <li>Opportunities to connect with corporates & investors</li>
         </ul>
       </section>
 
-      {/* Impact Vision */}
+      {/* Vision */}
       <section className="smes-impact">
         <h2>Our Impact Vision</h2>
         <p>
-          KDC aims to build a future where township businesses are digitally
-          empowered, competitive, and able to scale sustainably within the
-          digital economy.
+          KDC envisions a future where township businesses are digitally empowered,
+          competitive, and positioned to scale sustainably in the modern digital economy.
         </p>
       </section>
 
@@ -66,4 +64,4 @@ const RoleOfSMEs = () => {
   );
 };
 
-export default RoleOfSMEs
+export default RoleOfSMEs;
